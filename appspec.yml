@@ -1,0 +1,26 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/shopping-app
+permissions:
+  - object: /home/ec2-user/shopping-app
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+hooks:
+  ApplicationStop:
+    - location: scripts/stop.sh
+      timeout: 300
+      runas: ec2-user
+  BeforeInstall:
+    - location: scripts/install.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: ec2-user
+
+
+

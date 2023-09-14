@@ -1,0 +1,1 @@
+[![Quality gate](http://localhost:9000/api/project_badges/quality_gate?project=shopApp&token=sqb_66093a3189ffb86163f35e5ad38d848f4cdf9d1f)](http://localhost:9000/dashboard?id=shopApp)# cicd-sonarcloud
